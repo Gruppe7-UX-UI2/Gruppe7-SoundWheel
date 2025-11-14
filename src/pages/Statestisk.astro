@@ -1,0 +1,119 @@
+---
+
+---
+
+<section class="sw-statistik">
+  <div class="sw-statistik_indhold">
+    <h2 class="sw-statistik_overskrift">SoundWheel har hjulpet virksomheder som din og opnået</h2>
+
+    <div class="sw-statistik_gitter">
+      <article class="sw-statistik_element">
+        <div class="sw-donut1">
+          <img src="/public/donut1.svg" alt="" />
+        </div>
+        <p class="sw-statistik_procent">34%</p>
+        <p class="sw-statistik_tekst">En bedre balance mellem krop, sind og følelser.</p>
+      </article>
+
+      <article class="sw-statistik_element">
+        <div class="sw-donut2">
+          <img src="/public/donut2.svg" alt="" />
+        </div>
+        <p class="sw-statistik_procent">31%</p>
+        <p class="sw-statistik_tekst">En stærkere følelse af fællesskab og samhørighed.</p>
+      </article>
+
+      <article class="sw-statistik_element">
+        <div class="sw-donut3">
+          <img src="/public/donut3.svg" alt="" />
+        </div>
+        <p class="sw-statistik_procent">16%</p>
+        <p class="sw-statistik_tekst">En øget kreativitet og inspiration, samt fornyet energi og klarhed.</p>
+      </article>
+    </div>
+
+    <p class="sw-statistik_kilde">
+      Kilde: CAET-artikel (2025) - <a class="sw-statistik_link" href="#">Læs mere</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+  }
+
+  .sw-statistik {
+    background-color: #c9bfbd;
+    padding: 6rem 1.5rem;
+  }
+
+  .sw-statistik_indhold {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    color: #3c1515;
+  }
+
+  .sw-statistik_overskrift {
+    font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+    font-weight: 700;
+    margin-bottom: 4rem;
+  }
+
+  .sw-statistik_gitter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-items: center;
+  }
+
+  .sw-statistik_element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sw-statistik_procent {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .sw-statistik_tekst {
+    font-size: 1.3rem;
+    font-style: bold;
+    line-height: 1.35;
+    max-width: 14rem;
+  }
+
+  .sw-statistik_kilde {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .sw-statistik_link {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: inherit;
+  }
+
+  .sw-statistik_link:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 800px) {
+    .sw-statistik_gitter {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>
