@@ -1,0 +1,30 @@
+---
+export async function getStaticPaths() {
+  const url = "https://lrmrhubfcdexgbtzwhkl.supabase.co/rest/v1/Subscriptions";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxybXJodWJmY2RleGdidHp3aGtsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwNzcxMTcsImV4cCI6MjA3ODY1MzExN30.BNzYKZUOSXZL6ZaNW1b-yliRwEPQTcsV8Xbe0_D55AE";
+
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+
+  const supaRequest = await fetch(url, options);
+  const supaData = await supaRequest.json();
+
+  return supaData.map((subscription) => {
+    return {
+      params: { slug: subscription.slug },
+      props: { subscription },
+    };
+  });
+}
+
+const { subscription } = Astro.props;
+
+console.log("subscription");
+---
+
+<h1>{subscription.Name}</h1>
+<p>Pris: {subscription.Price} kr</p>
+<p>Op til {subscription.Employee} medarbejdere</p>

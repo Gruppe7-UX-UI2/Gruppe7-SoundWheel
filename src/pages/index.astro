@@ -1,5 +1,6 @@
 ---
 import "./styles/style.css";
+import AbonnementSektion from "./AbonnementSektion.astro";
 
 const url = "https://lrmrhubfcdexgbtzwhkl.supabase.co/rest/v1/Subscriptions";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxybXJodWJmY2RleGdidHp3aGtsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwNzcxMTcsImV4cCI6MjA3ODY1MzExN30.BNzYKZUOSXZL6ZaNW1b-yliRwEPQTcsV8Xbe0_D55AE";
@@ -26,5 +27,7 @@ console.log("supadata: ", supaData);
   </head>
   <body>
     <h1>Astro</h1>
+
+    <AbonnementSektion data={supaData} />
   </body>
 </html>

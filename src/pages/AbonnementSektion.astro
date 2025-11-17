@@ -1,22 +1,20 @@
 ---
 import Kort from "../pages/Kort.astro";
+
+const { data } = Astro.props;
 ---
 
 <section class="abonnement_sektion">
   <h2 class="abonnement_overskrift">Abonnementer</h2>
 
   <div class="abonnement_kort_wrapper">
-    <div class="abonnement_kort">
-      <Kort />
-    </div>
-
-    <div class="abonnement_kort">
-      <Kort />
-    </div>
-
-    <div class="abonnement_kort">
-      <Kort />
-    </div>
+    {
+      data.map((subscription) => (
+        <div class="abonnement_kort">
+          <Kort name={subscription.Name} employee={subscription.Employee} price={subscription.Price} slug={subscription.slug} />
+        </div>
+      ))
+    }
   </div>
 
   <p class="abonnement_note">
