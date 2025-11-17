@@ -1,0 +1,167 @@
+---
+
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<article class="kort">
+  <div class="kort_indhold">
+    <header class="kort_top">
+      <h3 class="kort_titel">SoundWheel Work 100</h3>
+      <p class="kort_undertekst">Op til 100 medarbejdere</p>
+    </header>
+
+    <div class="kort_prisblok">
+      <p class="kort_prislinje">
+        <span class="kort_pris">9.999 kr</span>
+        <span class="kort_pris_efter"> /år - eks.moms</span>
+      </p>
+    </div>
+
+    <button type="button" class="kort_knap">KØB NU</button>
+
+    <div class="kort_streg"></div>
+
+    <ul class="kort_liste">
+      <li class="kort_listepunkt">Musikdrevne visualiseringer</li>
+      <li class="kort_listepunkt">Dansk eller engelsk guide</li>
+      <li class="kort_listepunkt">Mulighed for at slå guide til og fra</li>
+      <li class="kort_listepunkt">Opret nemt dine medarbejdere</li>
+      <li class="kort_listepunkt">Intropakke med promomateriale</li>
+      <li class="kort_listepunkt">Tutorialvideoer med nem on-boarding</li>
+      <li class="kort_listepunkt">Fuld adgang til SoundWheel Kids</li>
+    </ul>
+  </div>
+</article>
+
+<style>
+  * {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+  }
+
+  /* Mobil version */
+
+  .kort {
+    background-color: #ffffff;
+    border-radius: 22px;
+    padding: 1.8rem 1.6rem 1.8rem;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.06);
+    color: #4b1c1c;
+  }
+
+  .kort_indhold {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .kort_top {
+    text-align: left;
+  }
+
+  .kort_titel {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .kort_undertekst {
+    font-size: 0.98rem;
+    opacity: 0.9;
+  }
+
+  .kort_prisblok {
+    text-align: left;
+  }
+
+  .kort_prislinje {
+    margin: 0;
+  }
+
+  .kort_pris {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .kort_pris_efter {
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+
+  .kort_knap {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #5d2320;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+  }
+
+  .kort_knap:hover {
+    filter: brightness(1.06);
+  }
+
+  .kort_streg {
+    border-bottom: 1px solid #b5a199;
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+
+  .kort_liste {
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0 0;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .kort_listepunkt + .kort_listepunkt {
+    margin-top: 0.3rem;
+  }
+
+  /* Desktop! */
+
+  @media (min-width: 768px) {
+    .kort {
+      border-radius: 28px;
+      padding: 2.6rem 2.4rem 2.4rem;
+      max-width: 330px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .kort_indhold {
+      gap: 1.8rem;
+    }
+
+    .kort_titel {
+      font-size: 1.32rem;
+    }
+
+    .kort_undertekst {
+      font-size: 1.05rem;
+    }
+
+    .kort_pris {
+      font-size: 2.25rem;
+    }
+
+    .kort_pris_efter {
+      font-size: 1rem;
+    }
+
+    .kort_liste {
+      font-size: 1rem;
+      margin-top: -0.2rem;
+    }
+  }
+</style>
