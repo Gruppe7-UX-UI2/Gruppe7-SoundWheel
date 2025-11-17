@@ -1,0 +1,98 @@
+---
+import Kort from "../pages/Kort.astro";
+---
+
+<section class="abonnement_sektion">
+  <h2 class="abonnement_overskrift">Abonnementer</h2>
+
+  <div class="abonnement_kort_wrapper">
+    <div class="abonnement_kort">
+      <Kort />
+    </div>
+
+    <div class="abonnement_kort">
+      <Kort />
+    </div>
+
+    <div class="abonnement_kort">
+      <Kort />
+    </div>
+  </div>
+
+  <p class="abonnement_note">
+    Over 1000 medarbejdere? <span class="abonnement_kontakt">Kontakt os</span>
+  </p>
+</section>
+
+<style>
+  * {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+  }
+
+  /* Mobil-first! */
+
+  .abonnement_sektion {
+    background-color: #d8cec3;
+    padding: 3rem 1.2rem 4rem;
+    text-align: center;
+    color: #4b1c1c;
+  }
+
+  .abonnement_overskrift {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #4b1c1c;
+  }
+
+  .abonnement_kort_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .abonnement_kort {
+    width: 100%;
+  }
+
+  .abonnement_note {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  .abonnement_kontakt {
+    font-weight: 700;
+  }
+
+  /* Desktop version! */
+
+  @media (min-width: 900px) {
+    .abonnement_sektion {
+      padding: 6rem 2rem 5rem;
+    }
+
+    .abonnement_overskrift {
+      font-size: 2.8rem;
+      margin-bottom: 3.2rem;
+    }
+
+    .abonnement_kort_wrapper {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2.8rem;
+      max-width: 1200px;
+    }
+
+    .abonnement_kort {
+      max-width: 330px;
+    }
+
+    .abonnement_note {
+      margin-top: 2.5rem;
+      font-size: 1.05rem;
+    }
+  }
+</style>
