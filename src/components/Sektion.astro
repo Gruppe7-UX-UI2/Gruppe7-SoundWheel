@@ -1,62 +1,71 @@
 ---
-
-
+const { titel, billede, brødtekst } = Astro.props;
 ---
+
 <section>
   <div class="flex">
     <div class="heading">
-      <h3>Hvem er jeg?</h3>
+      <h3>{titel}</h3>
     </div>
     <div class="image">
-      <img src="/public/kristian1.webp" alt="Kristian">
+      <img src={billede} alt="Kristian" />
     </div>
     <div class="text">
-      <p>
-        Mit navn er Kristian Humaidan, og jeg står bag SoundWheel. Du kender mig måske som Ufo fra Ufo & Yepha, hvor jeg arbejdede med rytme og energi.
-        <br><br>
-        I dag hjælper jeg virksomheder med ro, fokus og trivsel gennem lyd og vibration. Jeg viser, hvordan lyd kan give medarbejdere en naturlig pause i en travl hverdag.
-        <br><br>
-        Sammen kan vi skabe balance, energi og nærvær på din arbejdsplads.
-      </p>
+      <p>{brødtekst}</p>
     </div>
   </div>
 </section>
 
 <style>
-/* Mobilvisning: Overskrift > Billede > Tekst */
-.flex {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "heading"
-    "image"
-    "text";
-  gap: 10px;
-}
-
-.heading { grid-area: heading; }
-.image   { grid-area: image; }
-.text    { grid-area: text; }
-
-/* Desktopvisning: Overskrift + Tekst samlet til venstre, Billede til højre */
-@media (min-width: 800px) {
+  /* Mobilvisning: Overskrift > Billede > Tekst */
   .flex {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "heading image"
-      "text    image";
-    align-items: start;
-    gap: 20px;
+      "heading"
+      "image"
+      "text";
+    gap: 10px;
   }
 
-  .heading { grid-area: heading; align-items: center;}
-  .text    { grid-area: heading; margin-top: 30px;align-items: center;}
-  .image   { grid-area: image; }
-
-  .image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  .heading {
+    grid-area: heading;
   }
-}
+  .image {
+    grid-area: image;
+  }
+  .text {
+    grid-area: text;
+  }
+
+  /* Desktopvisning: Overskrift + Tekst samlet til venstre, Billede til højre */
+  @media (min-width: 800px) {
+    .flex {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "heading image"
+        "text    image";
+      align-items: start;
+      gap: 20px;
+    }
+
+    .heading {
+      grid-area: heading;
+      align-items: center;
+    }
+    .text {
+      grid-area: heading;
+      margin-top: 30px;
+      align-items: center;
+    }
+    .image {
+      grid-area: image;
+    }
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
 </style>
