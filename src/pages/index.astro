@@ -1,5 +1,6 @@
 ---
 import "./styles/style.css";
+import Header from "./Header.astro";
 import AbonnementSektion from "./AbonnementSektion.astro";
 import Hero from "./Hero.astro";
 
@@ -27,6 +28,8 @@ console.log("supadata: ", supaData);
     <title>Astro</title>
   </head>
   <body>
+    <!-- <h1>Astro</h1> -->
+    <Header />
     <h1>Astro</h1>
     <Hero />
     <AbonnementSektion data={supaData} />
