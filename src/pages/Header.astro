@@ -15,76 +15,103 @@
   </nav>
 
   <a class="header_cta" href="#">BOOK DEMO</a>
-</header>
 
-<style>
-  * {
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-  }
+  <nav class="navigation">
+    <div class="burger" id="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
 
-  /* Mobil first! */
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
 
-  .header {
-    width: 100%;
-    background: #ffffff;
+    /* Mobil first! */
 
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-
-    padding: 1.2rem 1.6rem;
-
-    min-height: 90px;
-  }
-
-  .header_logo img {
-    height: 68px;
-    width: auto;
-    display: block;
-  }
-
-  .header_nav {
-    display: none;
-  }
-
-  .header_cta {
-    background: #4a1716;
-    color: #fff;
-    padding: 0.6rem 1.8rem;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 50px;
-    white-space: nowrap;
-    font-size: 0.95rem;
-  }
-
-  /* Desktop version! */
-
-  @media (min-width: 900px) {
     .header {
-      padding: 1.8rem 3.2rem;
+      width: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.8rem 1.4rem;
       min-height: 95px;
     }
 
-    .header_nav {
-      display: flex;
-      gap: 3.6rem;
-      justify-self: center;
+    .header_logo img {
+      height: 68px;
+      width: auto;
     }
 
-    .header_nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: 0.02em;
-    }
-
+    /* Nav hidden on mobile */
+    .header_nav,
     .header_cta {
-      font-size: 1rem;
-      padding: 0.75rem 2rem;
-      border-radius: 999px;
+      display: none;
     }
-  }
-</style>
+
+    /* BURGER MENU */
+    .burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .burger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: #4a1716;
+      border-radius: 10px;
+    }
+
+    /* Desktop version! */
+
+    @media (min-width: 900px) {
+      .header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        padding: 1.8rem 3.2rem;
+      }
+
+      /* show nav + CTA */
+      .header_nav {
+        display: flex;
+        justify-self: center;
+        gap: 3.6rem;
+      }
+
+      .header_nav a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .header_cta {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        background: #4a1716;
+        color: #fff;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1rem;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+
+      /* hide burger on desktop */
+      .burger {
+        display: none;
+      }
+    }
+  </style>
+</header>
