@@ -45,9 +45,10 @@ const { name, price, employee, slug } = Astro.props;
   .kort {
     background-color: #ffffff;
     border-radius: 22px;
-    padding: 1.8rem 1.6rem 1.8rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     width: 100%;
-    max-width: 420px;
+    max-width: 520px;
     margin: 0 auto;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.06);
     color: #4b1c1c;
@@ -56,26 +57,26 @@ const { name, price, employee, slug } = Astro.props;
   .kort_indhold {
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
+    gap: 2rem;
   }
 
   .kort_top {
-    text-align: left;
+    text-align: center;
   }
 
   .kort_titel {
-    font-size: 1.12rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.35rem;
   }
 
   .kort_undertekst {
-    font-size: 0.98rem;
+    font-size: 1.5rem;
     opacity: 0.9;
   }
 
   .kort_prisblok {
-    text-align: left;
+    text-align: center;
   }
 
   .kort_prislinje {
@@ -83,7 +84,7 @@ const { name, price, employee, slug } = Astro.props;
   }
 
   .kort_pris {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.1;
   }
@@ -94,8 +95,9 @@ const { name, price, employee, slug } = Astro.props;
   }
 
   .kort_knap {
-    width: 100%;
+    width: 80%;
     padding: 0.8rem 1rem;
+    margin: 0 auto;
     border-radius: 999px;
     border: none;
     background-color: #5d2320;
@@ -112,14 +114,15 @@ const { name, price, employee, slug } = Astro.props;
 
   .kort_streg {
     border-bottom: 1px solid #b5a199;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     margin-top: 0.8rem;
   }
 
   .kort_liste {
     list-style: none;
     padding: 0;
-    margin: 0.8rem 0 0;
+    margin: 0.8rem auto;
     text-align: left;
     font-size: 0.95rem;
     line-height: 1.55;
@@ -134,8 +137,6 @@ const { name, price, employee, slug } = Astro.props;
   @media (min-width: 768px) {
     .kort {
       border-radius: 28px;
-      padding: 2.6rem 2.4rem 2.4rem;
-      max-width: 330px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
     }
 
@@ -144,7 +145,7 @@ const { name, price, employee, slug } = Astro.props;
     }
 
     .kort_titel {
-      font-size: 1.32rem;
+      font-size: 2rem;
     }
 
     .kort_undertekst {
@@ -153,6 +154,7 @@ const { name, price, employee, slug } = Astro.props;
 
     .kort_pris {
       font-size: 2.25rem;
+      align-items: center;
     }
 
     .kort_pris_efter {
