@@ -1,0 +1,80 @@
+---
+const { name, employee, price } = Astro.props;
+---
+
+<section>
+  <div class="desktop_1-1">
+    <h1>{name}</h1>
+    <h2>Op til {employee} medarbejdere</h2>
+
+    <img src="/billede.webp" class="billede" alt="billede" />
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
+
+    <div class="grid_1-1">
+      <p>Pris om året:</p>
+      <p>{price} kr eks.moms</p>
+    </div>
+  </div>
+
+  <div class="grid_1-1">
+    <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+    <p>Musikdrevene visualiseringer</p>
+  </div>
+
+  <div class="grid_1-1">
+    <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+    <p>Dansk eller Engelsk guide</p>
+  </div>
+
+  <div class="grid_1-1">
+    <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+    <p>Tutorialvideo med men on-boarding</p>
+  </div>
+
+  <div class="grid_1-1">
+    <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+    <p>Opret nemt med dine medarbejdere</p>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: #e0dcd3;
+  }
+
+  .billede {
+    aspect-ratio: 310/384;
+  }
+
+  .billede2 {
+    aspect-ratio: 20/20;
+  }
+
+  h1 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  p {
+    padding: 1rem;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 800px) {
+    .desktop_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
