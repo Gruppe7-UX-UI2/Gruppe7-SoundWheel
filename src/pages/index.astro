@@ -1,6 +1,22 @@
 ---
 import "./styles/style.css";
 import Header from "./Header.astro";
+import AbonnementSektion from "./AbonnementSektion.astro";
+import Hero from "./Hero.astro";
+
+const url = "https://lrmrhubfcdexgbtzwhkl.supabase.co/rest/v1/Subscriptions";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxybXJodWJmY2RleGdidHp3aGtsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwNzcxMTcsImV4cCI6MjA3ODY1MzExN30.BNzYKZUOSXZL6ZaNW1b-yliRwEPQTcsV8Xbe0_D55AE";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const supaRequest = await fetch(url, options);
+const supaData = await supaRequest.json();
+
+console.log("supadata: ", supaData);
 ---
 
 <html lang="en">
@@ -14,5 +30,8 @@ import Header from "./Header.astro";
   <body>
     <!-- <h1>Astro</h1> -->
     <Header />
+    <h1>Astro</h1>
+    <Hero />
+    <AbonnementSektion data={supaData} />
   </body>
 </html>

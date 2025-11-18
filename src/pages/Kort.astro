@@ -1,5 +1,5 @@
 ---
-
+const { name, price, employee, slug } = Astro.props;
 ---
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -7,18 +7,18 @@
 <article class="kort">
   <div class="kort_indhold">
     <header class="kort_top">
-      <h3 class="kort_titel">SoundWheel Work 100</h3>
-      <p class="kort_undertekst">Op til 100 medarbejdere</p>
+      <h3 class="kort_titel">{name}</h3>
+      <p class="kort_undertekst">Op til {employee} medarbejdere</p>
     </header>
 
     <div class="kort_prisblok">
       <p class="kort_prislinje">
-        <span class="kort_pris">9.999 kr</span>
+        <span class="kort_pris">{price} kr</span>
         <span class="kort_pris_efter"> /år - eks.moms</span>
       </p>
     </div>
 
-    <button type="button" class="kort_knap">KØB NU</button>
+    <a href={`/subscriptions/${slug}`} class="kort_knap"> KØB NU </a>
 
     <div class="kort_streg"></div>
 
