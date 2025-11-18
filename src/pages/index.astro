@@ -1,6 +1,5 @@
 ---
 import AbonnementSektion from "../components/AbonnementSektion.astro";
-import AbonnementHero from "../components/AbonnementHero.astro";
 import Hero from "../components/Hero.astro";
 import Statestisk from "../components/Statestisk.astro";
 import Sektion from "../components/Sektion.astro";
@@ -29,15 +28,13 @@ console.log("supadata: ", supaData);
   <Sektion titel="Hvem er jeg?" billede="/kristian1.webp" brødtekst="Mit navn er Kristian Humaidan, og jeg står bag SoundWheel. Du kender mig måske som Ufo fra Ufo & Yepha, hvor jeg arbejdede med rytme og energi. I dag hjælper jeg virksomheder med ro, fokus og trivsel gennem lyd og vibration. Jeg viser, hvordan lyd kan give medarbejdere en naturlig pause i en travl hverdag. Sammen kan vi skabe balance, energi og nærvær på din arbejdsplads." />
   <Sektion titel="Vil du opleve effekten på egen krop?" billede="/kristian1.webp" brødtekst="Book en kort, uforpligtende og guidet lyd-demo, og oplev SoundWheel live hos jer.nIngen forberedelse – bare nysgerrighed og lyst til en energigivende pause, der reducerer stress og styrker arbejdsglæde. Lyt, lær og mærk, hvordan ro og fokus vender tilbage – blot på under 10 minutter." />
 
-  <section>
+  <section class="illustrationer">
     <img src=" public/laptop.svg" alt="Computer med soundwheel" />
     <img src="public/app_logo.svg" alt="Soundwheels app logo" />
     <img src="public/mobil.svg" alt="Mobil med soundwheel" />
   </section>
 
   <AbonnementSektion data={supaData} />
-
-  <AbonnementHero />
 
   <Marquee />
 </Pagelayout>
