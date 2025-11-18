@@ -1,8 +1,8 @@
 ---
-import "./styles/style.css";
-import Header from "./Header.astro";
-import AbonnementSektion from "./AbonnementSektion.astro";
-import Hero from "./Hero.astro";
+import Header from "../components/Header.astro";
+import AbonnementSektion from "../components/AbonnementSektion.astro";
+import Hero from "../components/Hero.astro";
+import "../styles/style.css";
 
 const url = "https://lrmrhubfcdexgbtzwhkl.supabase.co/rest/v1/Subscriptions";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxybXJodWJmY2RleGdidHp3aGtsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwNzcxMTcsImV4cCI6MjA3ODY1MzExN30.BNzYKZUOSXZL6ZaNW1b-yliRwEPQTcsV8Xbe0_D55AE";
@@ -25,6 +25,7 @@ console.log("supadata: ", supaData);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Astro</title>
   </head>
   <body>
