@@ -1,7 +1,6 @@
 ---
-import Header from "../components/Header.astro";
 import AbonnementSektion from "../components/AbonnementSektion.astro";
-import Hero from "../components/Hero.astro";
+import Pagelayout from "../layouts/Pagelayout.astro";
 import "../styles/style.css";
 
 const url = "https://lrmrhubfcdexgbtzwhkl.supabase.co/rest/v1/Subscriptions";
@@ -19,20 +18,6 @@ const supaData = await supaRequest.json();
 console.log("supadata: ", supaData);
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Astro</title>
-  </head>
-  <body>
-    <!-- <h1>Astro</h1> -->
-    <Header />
-    <h1>Astro</h1>
-    <Hero />
-    <AbonnementSektion data={supaData} />
-  </body>
-</html>
+<Pagelayout>
+  <AbonnementSektion data={supaData} />
+</Pagelayout>
