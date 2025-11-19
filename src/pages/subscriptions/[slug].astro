@@ -1,6 +1,8 @@
 ---
 import AbonnementHero from "../../components/AbonnementHero.astro";
 import Pagelayout from "../../layouts/Pagelayout.astro";
+import AbonnementSektion2 from "../../components/AbonnementSektion2.astro";
+import "../../styles/style.css";
 
 export async function getStaticPaths() {
   const url = "https://lrmrhubfcdexgbtzwhkl.supabase.co/rest/v1/Subscriptions";
@@ -30,4 +32,6 @@ console.log("subscription");
 
 <Pagelayout>
   <AbonnementHero name={subscription.Name} employee={subscription.Employee} price={subscription.Price} />
+  <img src="/bølge.svg" alt="Bølge" />
+  <AbonnementSektion2 />
 </Pagelayout>
