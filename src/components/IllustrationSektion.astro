@@ -14,7 +14,7 @@
   .illustrationer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 12rem;
     position: relative;
     margin-bottom: 15rem;
   }
@@ -24,10 +24,10 @@
   }
 
   .app_logo {
-    position: absolute; /* logoet placeres i forhold til containeren */
-    top: 50%; /* løft logoet over mobilen */
-    left: 74%;
-    transform: translateX(-50%); /* centrer horisontalt over mobilen */
+    position: absolute;
+    top: 50%;
+    left: 68%;
+    transform: translateX(-50%);
     width: clamp(60px, 10vw, 180px);
     z-index: 5;
   }
@@ -41,7 +41,9 @@
   @media (max-width: 1000px) {
     .illustrationer {
       flex-direction: column;
+      padding-left: 0;
       align-items: center;
+      justify-content: center;
     }
 
     .app_logo {
