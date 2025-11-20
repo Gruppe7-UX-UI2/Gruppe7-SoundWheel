@@ -1,0 +1,203 @@
+<section class="signup">
+  <div class="signup_card">
+    <form class="signup_form">
+      <div class="signup_grid">
+        <div class="signup_field">
+          <label class="signup_label" for="fornavn">Fornavn</label>
+          <input class="signup_input" id="fornavn" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="efternavn">Efternavn</label>
+          <input class="signup_input" id="efternavn" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="email">E-mail</label>
+          <input class="signup_input" id="email" type="email" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="virksomhed">Virksomhed</label>
+          <input class="signup_input" id="virksomhed" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="jobtitel">Jobtitel</label>
+          <input class="signup_input" id="jobtitel" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="telefon">Telefon</label>
+          <input class="signup_input" id="telefon" type="tel" />
+        </div>
+
+        <div class="signup_field signup_field_full">
+          <label class="signup_label" for="land">Land*</label>
+          <select class="signup_input signup_select" id="land">
+            <option value="">Vælg...</option>
+            <option>Danmark</option>
+            <option>Sverige</option>
+            <option>Norge</option>
+          </select>
+        </div>
+
+        <div class="signup_field signup_field_full">
+          <label class="signup_label" for="cvr">CVR nr.*</label>
+          <input class="signup_input" id="cvr" type="text" placeholder="Vælg..." />
+        </div>
+      </div>
+
+      <label class="signup_checkbox">
+        <span class="signup_checkbox_box">
+          <span class="signup_checkbox_tick"></span>
+        </span>
+        <span class="signup_checkbox_text"> SoundWheel må gerne sende mig mails og tilbyde mig tilbud </span>
+        <input type="checkbox" class="signup_checkbox_input" checked />
+      </label>
+
+      <button type="submit" class="signup_button"> BOOK DIN DEMO </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Mobile first ! */
+  .signup {
+    padding: 2.5rem 1.25rem 3rem;
+    background-color: #f5eeea;
+    display: flex;
+    justify-content: center;
+  }
+
+  .signup_card {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fbf7f4;
+    border-radius: 22px;
+    padding: 2.5rem 1.8rem 2.8rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+
+  .signup_form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .signup_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.6rem;
+  }
+
+  .signup_field {
+    width: 100%;
+  }
+
+  .signup_label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    color: #3b1414;
+  }
+
+  .signup_input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #d1c2b8;
+    padding: 0.4rem 0 0.35rem;
+    background: transparent;
+    font-size: 1rem;
+    color: #3b1414;
+  }
+
+  .signup_input:focus {
+    outline: none;
+    border-bottom-color: #3b1414;
+  }
+
+  .signup_select {
+    padding-right: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  /* Checkbox */
+
+  .signup_checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.95rem;
+    color: #3b1414;
+  }
+
+  .signup_checkbox_input {
+    display: none;
+  }
+
+  .signup_checkbox_box {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 2px solid #3b1414;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+
+  .signup_checkbox_tick {
+    width: 12px;
+    height: 12px;
+    background-color: #3b1414;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  .signup_button {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    padding: 0.85rem 2.4rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #5b1f1b;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+  }
+
+  .signup_button:hover {
+    filter: brightness(1.05);
+  }
+
+  /* Desktop ! */
+
+  @media (min-width: 900px) {
+    .signup {
+      padding: 4rem 2rem;
+    }
+
+    .signup_card {
+      padding: 3rem 3rem 3.2rem;
+      border-radius: 24px;
+    }
+
+    .signup_grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 3rem;
+    }
+
+    .signup_field_full {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

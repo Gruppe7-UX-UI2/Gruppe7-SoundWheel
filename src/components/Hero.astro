@@ -1,14 +1,19 @@
 <section class="hero">
-  <img class="hero_img hero_img--top" src="/public/herobillede1.svg" alt="People working" />
+  <div class="hero_img_wrapper top">
+    <img src="/herobillede1.svg" alt="" />
+  </div>
 
   <div class="hero_box">
     <h1>VIL DU SKABE PAUSER DER BETALER SIG?</h1>
   </div>
 
-  <img class="hero_img hero_img--bottom" src="/public/herobillede2.svg" alt="Woman relaxing" />
+  <div class="hero_img_wrapper bottom">
+    <img src="/herobillede2.svg" alt="" />
+  </div>
 </section>
 
 <style>
+  /* Mobil først! */
   .hero {
     width: 100%;
     display: flex;
@@ -29,6 +34,15 @@
     object-position: 50% 32%;
   }
 
+  .hero_left {
+    background-image: url("/herobillede1.svg");
+  }
+
+  .hero_right {
+    background-image: url("/herobillede2.svg");
+  }
+
+  /* Tekst ! */
   .hero_box {
     background: #3b1414;
     color: white;
@@ -36,9 +50,8 @@
     border-radius: 1.2rem;
     width: 400px;
     max-width: 90%;
-    margin: -2rem 0;
-    z-index: 5;
     text-align: center;
+    z-index: 10;
   }
 
   .hero_box h1 {
