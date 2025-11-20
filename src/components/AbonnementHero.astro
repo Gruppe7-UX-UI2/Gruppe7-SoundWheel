@@ -1,0 +1,145 @@
+---
+const { name, employee, price } = Astro.props;
+---
+
+<section>
+  <h1>{name}</h1>
+  <h2>Op til {employee} medarbejdere</h2>
+  <div class="desktop_1-1">
+    <img src="/billede.webp" class="billede" alt="billede" />
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
+
+      <div class="flex_pris">
+        <p class="pris_tekst">Pris om året:</p>
+        <p class="pris">{price} kr eks.moms</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="flex_tjek">
+      <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+      <p>Musikdrevene visualiseringer</p>
+    </div>
+
+    <div class="flex_tjek">
+      <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+      <p>Dansk eller Engelsk guide</p>
+    </div>
+
+    <div class="flex_tjek">
+      <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+      <p>Tutorialvideo med men on-boarding</p>
+    </div>
+
+    <div class="flex_tjek">
+      <img src="/tjekboks.svg" class="billede2" alt="Billede" />
+      <p>Opret nemt med dine medarbejdere</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: #e0dcd3;
+    margin-bottom: 8rem;
+  }
+
+  h1 {
+    padding-top: 3rem;
+    text-align: center;
+    color: #38171A;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: #38171A;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #38171A;
+  }
+
+  .flex_tjek {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .flex_tjek img {
+    width: 60px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    gap: 30px;
+  }
+
+  .desktop_1-1 img {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+
+  .desktop_1-1 p {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+  }
+
+  .flex_pris {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  .pris_tekst {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  .pris {
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: 800px) {
+    .desktop_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 5rem;
+      grid-template-areas: "left right";
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+      justify-content: center;
+    }
+
+    .flex_tjek {
+      max-width: 300px;
+    }
+
+    .billede {
+      grid-area: right;
+
+    }
+
+    h2 {
+      margin-bottom: 3rem;
+      
+    }
+  }
+</style>

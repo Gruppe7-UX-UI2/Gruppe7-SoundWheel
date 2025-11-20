@@ -1,0 +1,89 @@
+<section class="hero">
+  <img class="hero_img hero_img--top" src="/public/herobillede1.svg" alt="People working" />
+
+  <div class="hero_box">
+    <h1>VIL DU SKABE PAUSER DER BETALER SIG?</h1>
+  </div>
+
+  <img class="hero_img hero_img--bottom" src="/public/herobillede2.svg" alt="Woman relaxing" />
+</section>
+
+<style>
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 15rem;
+  }
+
+  .hero_img {
+    width: 100%;
+    height: 33vh;
+    object-fit: cover;
+    object-position: 70% 20%;
+  }
+
+  .hero_img:last-child {
+    object-position: 50% 32%;
+  }
+
+  .hero_box {
+    background: #3b1414;
+    color: white;
+    padding: 3rem 1.5rem;
+    border-radius: 1.2rem;
+    width: 400px;
+    max-width: 90%;
+    margin: -2rem 0;
+    z-index: 5;
+    text-align: center;
+  }
+
+  .hero_box h1 {
+    font-size: 2.3rem;
+    font-weight: 550;
+    line-height: 1.5;
+    margin: 0;
+  }
+  /* Desktop ! */
+
+  @media (min-width: 700px) {
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 0;
+    }
+
+    .hero_img--top,
+    .hero_img--bottom {
+      width: 40%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .hero_box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50px);
+      z-index: 10;
+      max-width: 800px;
+      width: 600px;
+      padding: 3.5rem 4rem;
+      background: #3b1414;
+      color: white;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .hero_box h1 {
+      font-size: 3.3rem;
+    }
+  }
+</style>

@@ -1,0 +1,135 @@
+---
+const { variant, titel, billede, brødtekst1, brødtekst2, brødtekst3, knap } = Astro.props;
+---
+
+<section class={variant}>
+  <div class="flex">
+    <div class="heading">
+      <h3>{titel}</h3>
+    </div>
+    <div class="image">
+      <img src={billede} alt="Kristian" />
+    </div>
+    <div class="text">
+      <p>{brødtekst1}</p>
+      <p>{brødtekst2}</p>
+      <p>{brødtekst3}</p>
+      <button class="button" type="submit" class="signup_button"> {knap} </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Mobilvisning: Overskrift > Billede > Tekst */
+  h3 {
+    font-size: clamp(2.5rem, 3vw, 3.5rem);
+    text-align: center;
+    color: #4f1918;
+  }
+
+  p {
+    font-size: clamp(1rem, 5vw, 2rem);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: #4f1918;
+  }
+
+  section {
+    padding: 2rem 3rem;
+    margin-bottom: 15rem;
+  }
+
+  .flex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "image"
+      "text";
+    gap: 50px;
+  }
+
+  .heading {
+    grid-area: heading;
+  }
+  .image {
+    grid-area: image;
+  }
+  .text {
+    grid-area: text;
+  }
+
+  .button {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    padding: 0.85rem 2.4rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #5b1f1b;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin-bottom: 5rem;
+  }
+
+  .button:hover {
+    filter: brightness(1.25);
+  }
+
+  /* Desktopvisning: Overskrift + Tekst samlet til venstre, Billede til højre */
+  @media (min-width: 1000px) {
+    h3 {
+      text-align: start;
+    }
+
+    .flex {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "heading image"
+        "text    image";
+      align-items: start;
+      gap: 50px;
+    }
+
+    .heading {
+      grid-area: heading;
+      align-items: center;
+      max-width: 90%;
+      padding-left: 5rem;
+    }
+    .text {
+      grid-area: heading;
+      align-items: center;
+      max-width: 80%;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+    .image {
+      grid-area: image;
+    }
+
+    .image img {
+      max-width: 80%;
+      margin: 0 auto;
+      height: auto;
+      display: block;
+    }
+
+    /****** Sektion2 ***********/
+
+    .sektion2 .text {
+      padding-top: 200px;
+      grid-area: image;
+    }
+
+    .sektion2 .heading {
+      grid-area: image;
+    }
+
+    .sektion2 .image {
+      grid-area: heading;
+    }
+  }
+</style>

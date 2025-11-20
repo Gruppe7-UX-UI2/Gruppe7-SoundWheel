@@ -1,0 +1,101 @@
+<footer>
+  <div class="grid_desktop">
+    <img src="/footer_logo.svg" class="footer_logo" alt="SoundWheel logo" />
+    <ul>
+      <li><a href="">Om SoundWheel</a></li>
+      <li><a href="">Book demo</a></li>
+      <li><a href="">Kontakt</a></li>
+      <li><a href="">Handels- og abonnementbetingelser</a></li>
+      <li><a href="">Persondatapolitik</a></li>
+    </ul>
+
+    <div class="app_download">
+      <p>Download SoundWheel now and get 14 days free trial</p>
+
+      <div class="grid_1-1">
+        <a href="https://play.google.com/store/apps/details?id=com.soundwheel.soundwheel"><img src="/googleplay.svg" alt="Google Play logo" /></a>
+        <a href="https://apps.apple.com/dk/app/soundwheel-genoplad-via-musik/id1617422124?l=da"><img src="/appstore.svg" alt="App Store logo" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /************** Mobile **************/
+
+  footer {
+    background-color: #38171a;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  footer a {
+    color: white;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  footer ul {
+    margin-bottom: 3.5rem;
+  }
+
+  footer p {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 100;
+  }
+
+  .footer_logo {
+    width: 80%;
+    min-width: 400px;
+    margin-bottom: 3.5rem;
+  }
+
+  .grid_1-1 {
+    display: flex;
+    gap: 5px;
+    max-width: 450px;
+  }
+
+  .grid_1-1 img {
+    width: 90%;
+  }
+
+  /************ Desktop *************/
+
+  @media (min-width: 1000px) {
+    .grid_desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      padding-left: 6rem;
+      justify-content: center;
+    }
+
+    .footer_logo {
+      grid-area: 1/1;
+    }
+
+    .app_download {
+      grid-area: 1/1;
+      margin-top: 20rem;
+    }
+
+    footer ul {
+      margin-bottom: 0;
+    }
+  }
+</style>

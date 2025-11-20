@@ -1,0 +1,255 @@
+<section class="text">
+  <h2>Book et møde med SoundWheel</h2>
+  <p>Se hvordan et møde SoundWheel og oplev hvordan mindfulness kan forbedre dit liv</p>
+  <h3>Ved at købe får du</h3>
+  <ul>
+    <li>Indblik i hvordan du bruger SoundWheel mest effektivt</li>
+    <li>Inspiration til at integrere lydpauser i jeres hverdag</li>
+    <li>Konkrete forslag til trivselstiltag tilpasset jeres team</li>
+  </ul>
+</section>
+
+<section class="signup">
+  <div class="signup_card">
+    <form class="signup_form">
+      <div class="signup_grid">
+        <div class="signup_field">
+          <label class="signup_label" for="fornavn">Fornavn</label>
+          <input class="signup_input" id="fornavn" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="efternavn">Efternavn</label>
+          <input class="signup_input" id="efternavn" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="email">E-mail</label>
+          <input class="signup_input" id="email" type="email" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="virksomhed">Virksomhed</label>
+          <input class="signup_input" id="virksomhed" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="jobtitel">Jobtitel</label>
+          <input class="signup_input" id="jobtitel" type="text" />
+        </div>
+
+        <div class="signup_field">
+          <label class="signup_label" for="telefon">Telefon</label>
+          <input class="signup_input" id="telefon" type="tel" />
+        </div>
+
+        <div class="signup_field signup_field_full">
+          <label class="signup_label" for="land">Land*</label>
+          <select class="signup_input signup_select" id="land">
+            <option value="">Vælg...</option>
+            <option>Danmark</option>
+            <option>Sverige</option>
+            <option>Norge</option>
+          </select>
+        </div>
+
+        <div class="signup_field signup_field_full">
+          <label class="signup_label" for="cvr">CVR nr.*</label>
+          <input class="signup_input" id="cvr" type="text" placeholder="Vælg..." />
+        </div>
+      </div>
+
+      <label class="signup_checkbox">
+        <span class="signup_checkbox_box">
+          <span class="signup_checkbox_tick"></span>
+        </span>
+        <span class="signup_checkbox_text"> SoundWheel må gerne sende mig mails og tilbyde mig tilbud </span>
+        <input type="checkbox" class="signup_checkbox_input" checked />
+      </label>
+
+      <button type="submit" class="signup_button"> BOOK DIN DEMO </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Mobile first ! */
+  .text {
+    padding: 2.3rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.8rem;
+    color: #3b1414;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 2rem;
+    color: #3b1414;
+  }
+
+  li {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-weight: 200;
+    color: #3b1414;
+  }
+
+  ul {
+    padding-left: 4rem;
+  }
+
+  p {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 4rem;
+    font-weight: 200;
+    color: #3b1414;
+  }
+  .signup {
+    padding: 2.5rem 1.25rem 3rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
+
+  .signup_card {
+    width: 100%;
+    max-width: 1600px;
+    background-color: #fbf7f4;
+    border-radius: 22px;
+    padding: 2.5rem 1.8rem 2.8rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid #3b1414;
+  }
+
+  .signup_form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .signup_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .signup_field {
+    width: 100%;
+  }
+
+  .signup_label {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #3b1414;
+  }
+
+  .signup_input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #d1c2b8;
+    padding: 0.4rem 0 0.35rem;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #3b1414;
+  }
+
+  .signup_input:focus {
+    outline: none;
+    border-bottom-color: #3b1414;
+  }
+
+  .signup_select {
+    padding-right: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  /* Checkbox */
+
+  .signup_checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.5rem;
+    color: #3b1414;
+  }
+
+  .signup_checkbox_input {
+    display: none;
+  }
+
+  .signup_checkbox_box {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 2px solid #3b1414;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+
+  .signup_checkbox_tick {
+    width: 12px;
+    height: 12px;
+    background-color: #3b1414;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  .signup_button {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    padding: 0.85rem 2.4rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #5b1f1b;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin-bottom: 5rem;
+  }
+
+  .signup_button:hover {
+    filter: brightness(1.05);
+  }
+
+  /* Desktop ! */
+
+  @media (min-width: 900px) {
+    .signup {
+      padding: 4rem 2rem;
+    }
+
+    .signup_card {
+      padding: 3rem 3rem 3.2rem;
+      border-radius: 24px;
+    }
+
+    .signup_grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 3rem;
+    }
+
+    .signup_field_full {
+      grid-column: 1 / -1;
+    }
+    .text {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+  }
+</style>

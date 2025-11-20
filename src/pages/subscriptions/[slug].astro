@@ -1,0 +1,39 @@
+---
+import AbonnementHero from "../../components/AbonnementHero.astro";
+import Pagelayout from "../../layouts/Pagelayout.astro";
+import AbonnementSektion2 from "../../components/AbonnementSektion2.astro";
+import Signup from "../../components/Signup.astro";
+import "../../styles/style.css";
+
+export async function getStaticPaths() {
+  const url = "https://lrmrhubfcdexgbtzwhkl.supabase.co/rest/v1/Subscriptions";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxybXJodWJmY2RleGdidHp3aGtsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwNzcxMTcsImV4cCI6MjA3ODY1MzExN30.BNzYKZUOSXZL6ZaNW1b-yliRwEPQTcsV8Xbe0_D55AE";
+
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+
+  const supaRequest = await fetch(url, options);
+  const supaData = await supaRequest.json();
+
+  return supaData.map((subscription) => {
+    return {
+      params: { slug: subscription.slug },
+      props: { subscription },
+    };
+  });
+}
+
+const { subscription } = Astro.props;
+
+console.log("subscription");
+---
+
+<Pagelayout>
+  <AbonnementHero name={subscription.Name} employee={subscription.Employee} price={subscription.Price} />
+  <Signup />
+  <img src="/bølge.svg" alt="Bølge" />
+  <AbonnementSektion2 />
+</Pagelayout>

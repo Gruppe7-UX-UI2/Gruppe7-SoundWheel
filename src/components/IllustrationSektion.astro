@@ -1,0 +1,66 @@
+<section class="illustrationer">
+  <img class="laptop" src=" public/laptop.svg" alt="Computer med soundwheel" />
+  <div class="mobil_logo">
+    <img class="app_logo" src="public/app_logo.svg" alt="Soundwheels app logo" />
+    <img class="mobil" src="public/mobil.svg" alt="Mobil med soundwheel" />
+  </div>
+</section>
+
+<style>
+  .laptop {
+    width: 70%;
+  }
+
+  .illustrationer {
+    display: flex;
+    align-items: center;
+    padding-left: 12rem;
+    position: relative;
+    margin-bottom: 15rem;
+  }
+
+  .mobil_logo {
+    width: 200px;
+  }
+
+  .app_logo {
+    position: absolute;
+    top: 50%;
+    left: 68%;
+    transform: translateX(-50%);
+    width: clamp(60px, 10vw, 180px);
+    z-index: 5;
+  }
+
+  .mobil {
+    position: relative;
+    transform: translate(-80px, -15px);
+    width: clamp(150px, 20vw, 380px);
+  }
+
+  @media (max-width: 1000px) {
+    .illustrationer {
+      flex-direction: column;
+      padding-left: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app_logo {
+      position: relative;
+      transform: translate(-160%, 360%);
+      margin-bottom: -50px;
+      width: 60%;
+    }
+
+    .mobil {
+      width: 140%;
+      transform: none;
+    }
+
+    .laptop {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+  }
+</style>
