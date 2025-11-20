@@ -1,117 +1,136 @@
----
-
----
-
 <header class="header">
-  <a href="/" class="header_logo">
-    <img src="/public/LOGO.svg" alt="SoundWheel logo" />
+  <a href="/" class="logo">
+    <img src="/LOGO.svg" alt="SoundWheel logo" />
   </a>
 
-  <nav class="header_nav">
-    <a href="#">LOREM</a>
-    <a href="#">LOREM</a>
-    <a href="#">LOREM</a>
-    <a href="#">LOREM</a>
+  <button class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="navigation" id="navigation">
+    <ul class="links" id="links">
+      <li><a href="#">LOREM</a></li>
+      <li><a href="#">LOREM</a></li>
+      <li><a href="#">LOREM</a></li>
+      <li><a href="#">LOREM</a></li>
+
+      <li class="mobile-cta">
+        <a class="cta" href="#">BOOK DEMO</a>
+      </li>
+    </ul>
   </nav>
 
-  <a class="header_cta" href="#">BOOK DEMO</a>
+  <a class="cta desktop-only" href="#">BOOK DEMO</a>
+</header>
 
-  <nav class="navigation">
-    <div class="burger" id="burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </nav>
+<script src="/src/pages/styles/burgermenu.js"></script>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: "Inter", sans-serif;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
 
-    /* Mobil first! */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: white;
+    width: 100%;
+  }
 
-    .header {
-      width: 100%;
-      background: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.8rem 1.4rem;
-      min-height: 95px;
-    }
+  .logo img {
+    width: 130px;
+  }
 
-    .header_logo img {
-      height: 68px;
-      width: auto;
-    }
+  .burger {
+    width: 32px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
-    /* Nav hidden on mobile */
-    .header_nav,
-    .header_cta {
+  .burger span {
+    width: 100%;
+    height: 3px;
+    background: #4a1716;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    padding: 5rem 2rem;
+    transition: 0.3s ease;
+  }
+
+  .navigation.active {
+    right: 0;
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .links a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #4a1716;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 900px) {
+    .burger {
       display: none;
     }
 
-    /* BURGER MENU */
-    .burger {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
+    .navigation {
+      position: static;
+      height: auto;
+      width: auto;
       padding: 0;
     }
 
-    .burger span {
-      display: block;
-      width: 28px;
-      height: 3px;
-      background-color: #4a1716;
-      border-radius: 10px;
+    .links {
+      flex-direction: row;
+      gap: 3rem;
     }
 
-    /* Desktop version! */
-
-    @media (min-width: 900px) {
-      .header {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-        padding: 1.8rem 3.2rem;
-      }
-
-      /* show nav + CTA */
-      .header_nav {
-        display: flex;
-        justify-self: center;
-        gap: 3.6rem;
-      }
-
-      .header_nav a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 1rem;
-      }
-
-      .header_cta {
-        display: inline-block;
-        padding: 0.75rem 2rem;
-        background: #4a1716;
-        color: #fff;
-        border-radius: 999px;
-        font-weight: 600;
-        font-size: 1rem;
-        white-space: nowrap;
-        text-decoration: none;
-      }
-
-      /* hide burger on desktop */
-      .burger {
-        display: none;
-      }
+    .mobile-cta {
+      display: none;
     }
-  </style>
-</header>
+
+    .desktop-only {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: #4a1716;
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 2rem;
+    }
+  }
+</style>
