@@ -1,48 +1,62 @@
 <section class="hero">
-  <img class="hero_img hero_img--top" src="/public/herobillede1.svg" alt="People working" />
+  <div class="hero_img_wrapper top">
+    <img src="/herobillede1.svg" alt="" />
+  </div>
 
   <div class="hero_box">
     <h1>VIL DU SKABE PAUSER DER BETALER SIG?</h1>
   </div>
 
-  <img class="hero_img hero_img--bottom" src="/public/herobillede2.svg" alt="Woman relaxing" />
+  <div class="hero_img_wrapper bottom">
+    <img src="/herobillede2.svg" alt="" />
+  </div>
 </section>
 
 <style>
+  /* Mobil først! */
   .hero {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    gap: 2rem;
   }
 
   .hero_img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 380px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
+  .hero_left {
+    background-image: url("/herobillede1.svg");
+  }
+
+  .hero_right {
+    background-image: url("/herobillede2.svg");
+  }
+
+  /* Tekst ! */
   .hero_box {
     background: #3b1414;
     color: white;
     padding: 2rem 1.5rem;
     border-radius: 1.2rem;
     max-width: 90%;
-    margin: -2rem 0;
-    z-index: 5;
     text-align: center;
+    z-index: 10;
   }
 
   .hero_box h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.25;
     margin: 0;
   }
 
   /* Desktop ! */
-
   @media (min-width: 900px) {
     .hero {
       flex-direction: row;
@@ -52,35 +66,28 @@
       padding: 4rem 0;
     }
 
-    .hero_img--top,
-    .hero_img--bottom {
-      width: 40%;
-      height: 420px;
-      border-radius: 18px;
-      object-fit: cover;
+    .hero_img {
+      width: 35vw;
+      height: 480px;
+      border-radius: 26px;
     }
 
-    /* Desktop placering */
+    .hero_left {
+      background-position: right center;
+    }
 
-    .hero_img--top {
-      order: 1;
+    .hero_right {
+      background-position: left center;
     }
 
     .hero_box {
-      order: 2;
-      margin: 0;
       padding: 3.5rem 4rem;
-      max-width: 460px;
+      max-width: 500px;
       border-radius: 20px;
     }
 
     .hero_box h1 {
-      font-size: 2.6rem;
-      line-height: 1.25;
-    }
-
-    .hero_img--bottom {
-      order: 3;
+      font-size: 2.8rem;
     }
   }
 </style>
