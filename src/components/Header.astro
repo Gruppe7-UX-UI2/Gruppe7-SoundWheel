@@ -16,13 +16,16 @@
       <li><a href="#">LOREM</a></li>
       <li><a href="#">LOREM</a></li>
 
+      <li class="desktop-cta">
+        <a class="cta" href="#">BOOK DEMO</a>
+      </li>
+
+      <!-- Mobil-version (kun i burger-menuen) -->
       <li class="mobile-cta">
         <a class="cta" href="#">BOOK DEMO</a>
       </li>
     </ul>
   </nav>
-
-  <a class="cta desktop-only" href="#">BOOK DEMO</a>
 </header>
 
 <script src="/src/pages/styles/burgermenu.js"></script>
@@ -105,8 +108,34 @@
     display: none;
   }
 
+  .cta {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #4a1716;
+    color: white; /* sæt farven her */
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  li .cta {
+    color: white;
+  }
+
+  .cta a {
+    color: white;
+  }
+
+  .mobile-cta {
+    display: block;
+  }
+
+  .desktop-cta {
+    display: none;
+  }
+
   /* DESKTOP */
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
     .burger {
       display: none;
     }
@@ -120,22 +149,15 @@
 
     .links {
       flex-direction: row;
-      gap: 3rem;
+      gap: 5rem;
     }
 
     .mobile-cta {
       display: none;
     }
 
-    .desktop-only {
+    .desktop-cta {
       display: inline-block;
-      padding: 0.8rem 2rem;
-      background: #4a1716;
-      color: white;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      margin-left: 2rem;
     }
   }
 </style>
