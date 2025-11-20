@@ -1,3 +1,14 @@
+<section class="text">
+  <h2>Book et møde med SoundWheel</h2>
+  <p>Se hvordan et møde SoundWheel og oplev hvordan mindfulness kan forbedre dit liv</p>
+  <h3>Ved at købe får du</h3>
+  <ul>
+    <li>Indblik i hvordan du bruger SoundWheel mest effektivt</li>
+    <li>Inspiration til at integrere lydpauser i jeres hverdag</li>
+    <li>Konkrete forslag til trivselstiltag tilpasset jeres team</li>
+  </ul>
+</section>
+
 <section class="signup">
   <div class="signup_card">
     <form class="signup_form">
@@ -67,32 +78,67 @@
   }
 
   /* Mobile first ! */
+  .text {
+    padding: 2.3rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.8rem;
+    color: #3b1414;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 2rem;
+    color: #3b1414;
+  }
+
+  li {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-weight: 200;
+    color: #3b1414;
+  }
+
+  ul {
+    padding-left: 4rem;
+  }
+
+  p {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 4rem;
+    font-weight: 200;
+    color: #3b1414;
+  }
   .signup {
     padding: 2.5rem 1.25rem 3rem;
-    background-color: #f5eeea;
     display: flex;
     justify-content: center;
+    margin-bottom: 10rem;
   }
 
   .signup_card {
     width: 100%;
-    max-width: 900px;
+    max-width: 1600px;
     background-color: #fbf7f4;
     border-radius: 22px;
     padding: 2.5rem 1.8rem 2.8rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid #3b1414;
   }
 
   .signup_form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   .signup_grid {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 1.6rem;
+    row-gap: 3rem;
   }
 
   .signup_field {
@@ -101,7 +147,8 @@
 
   .signup_label {
     display: block;
-    font-size: 0.95rem;
+    font-size: 1.8rem;
+    font-weight: 600;
     margin-bottom: 0.3rem;
     color: #3b1414;
   }
@@ -112,7 +159,7 @@
     border-bottom: 2px solid #d1c2b8;
     padding: 0.4rem 0 0.35rem;
     background: transparent;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #3b1414;
   }
 
@@ -134,7 +181,7 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     color: #3b1414;
   }
 
@@ -169,10 +216,11 @@
     border: none;
     background-color: #5b1f1b;
     color: #ffffff;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     cursor: pointer;
+    margin-bottom: 5rem;
   }
 
   .signup_button:hover {
@@ -198,6 +246,10 @@
 
     .signup_field_full {
       grid-column: 1 / -1;
+    }
+    .text {
+      max-width: 1600px;
+      margin: 0 auto;
     }
   }
 </style>
