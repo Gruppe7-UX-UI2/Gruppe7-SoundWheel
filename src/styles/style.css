@@ -25,6 +25,12 @@ img {
   font-style: normal;
 }
 
+.quattrocento-sans-regular {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*******************************************/
 
 h1,
@@ -34,6 +40,12 @@ h3 {
 }
 
 p,
-a {
+a,
+li {
   font-family: "Inter", sans-serif;
+}
+
+label,
+span {
+  font-family: "Quattrocento Sans", sans-serif;
 }

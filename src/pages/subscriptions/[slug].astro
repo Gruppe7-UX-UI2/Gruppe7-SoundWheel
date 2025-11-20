@@ -2,6 +2,7 @@
 import AbonnementHero from "../../components/AbonnementHero.astro";
 import Pagelayout from "../../layouts/Pagelayout.astro";
 import AbonnementSektion2 from "../../components/AbonnementSektion2.astro";
+import Signup from "../../components/Signup.astro";
 import "../../styles/style.css";
 
 export async function getStaticPaths() {
@@ -32,6 +33,7 @@ console.log("subscription");
 
 <Pagelayout>
   <AbonnementHero name={subscription.Name} employee={subscription.Employee} price={subscription.Price} />
+  <Signup />
   <img src="/bølge.svg" alt="Bølge" />
   <AbonnementSektion2 />
 </Pagelayout>

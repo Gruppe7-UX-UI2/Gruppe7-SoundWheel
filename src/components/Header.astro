@@ -1,5 +1,5 @@
 <header class="header">
-  <a href="/" class="logo">
+  <a href="/index.html" class="logo">
     <img src="/LOGO.svg" alt="SoundWheel logo" />
   </a>
 
@@ -74,6 +74,7 @@
     background: white;
     padding: 5rem 2rem;
     transition: 0.3s ease;
+    z-index: 100;
   }
 
   .navigation.active {
@@ -94,6 +95,10 @@
     text-decoration: none;
     font-weight: 600;
     color: #4a1716;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
   }
 
   .desktop-only {
